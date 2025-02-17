@@ -47,13 +47,17 @@
 
 ## デバッグ
 
-- `Ctrl + Shift + P`→`.Net: Generate Assets for Build and Debug`
-  - .vscode/launch.json, tasks.json が作られる
-- tasks.json
-  - `"label":"build"`→`"label":"build_ConsoleApp"`に変える
-- launch.json
-  - `"name": ".NET Core Launch (console)"`→`"name": ".NET Core Launch (console)_ConsoleApp"`に変える
-  - `"preLaunchTask": "build"`→`"preLaunchTask": "build_ConsoleApp",`に変える
+- 1 つ目のプロジェクト
+  - `Ctrl + Shift + P`→`.Net: Generate Assets for Build and Debug`
+    - .vscode/launch.json, tasks.json が作られる
+  - tasks.json
+    - `"label":"build"`→`"label":"build_ConsoleApp"`に変える
+  - launch.json
+    - `"name": ".NET Core Launch (console)"`→`"name": ".NET Core Launch (console)_ConsoleApp"`に変える
+    - `"preLaunchTask": "build"`→`"preLaunchTask": "build_ConsoleApp",`に変える
+- 2 つ目のプロジェクト
+  - `Ctrl + Shift + P`→`.Net: Generate Assets for Build and Debug`
+    - .vscode/launch.json, tasks.json が作られる(置き換えますか？の警告は OK)
 
 ## 参考
 
