@@ -6,7 +6,7 @@
 
 - 必須
   - C# Dev Kit (Microsoft)
-    - C#開発の基本ツール
+    - C#開発の基本ツール, デバッグ等
   - C# (Microsoft)
     - C# の基本言語サポート(C# Dev Kit に付随してくる)
   - .NET Install Tool (Microsoft)
@@ -15,7 +15,7 @@
     - C#コード補完ツール
 - 任意
   - C# Extensions (JosKreativ)
-    - VisualStudio のようにクラスなどを追加できるようになる
+    - 右クリックでクラスファイル等を追加できる
 
 ## .NET バージョン確認
 
@@ -28,22 +28,40 @@
   - インストールされているテンプレート確認
 - `dotnet new gitignore`
   - .gitignore 作成
-- `dotnet new console -o ./ConsoleApp`
-  - 指定の場所にコンソールアプリ作成
+- `dotnet new console -o {Path}`
+  - 指定の場所にコンソールプロジェクト作成
+- `dotnet new classlib -o {Path}`
+  - 指定の場所にクラスライブラリプロジェクト作成
+- `dotnet new mvc -o {Path}`
+  - 指定の場所に ASP.NET Core Web MVC プロジェクト作成
+- `dotnet new webapi -o {Path}`
+  - 指定の場所に ASP.NET Core Web API プロジェクト作成
 
 ## ソリューション追加
 
 - `dotnet new sln`
   - ソリューションファイル作成
-- `dotnet sln add ./ConsoleApp`
+- `dotnet sln add {Path}`
   - プロジェクト追加
+- `dotnet sln remove {Path}`
+  - プロジェクト削除
+- `dotnet sln list`
+  - ソリューション内のプロジェクト表示
+
+## プロジェクト参照追加
+
+- `dotnet add {参照する側Path} reference {参照される側Path}`
+  - プロジェクト参照を追加する
+- `dotnet remove {参照する側Path} reference {参照される側Path}`
+  - プロジェクト参照を削除する
 
 ## ビルド
 
 - `dotnet build`
-  - csproj のある階層で実行すると bin と obj ができる
+  - bin と obj が作られる
 - `dotnet run`
-  - csproj のある階層で実行するとターミナルで実行結果が返る
+  - ターミナルで実行結果が返る
+  - もしくは F5
 
 ## デバッグ
 
@@ -58,7 +76,21 @@
 - 2 つ目のプロジェクト
   - `Ctrl + Shift + P`→`.Net: Generate Assets for Build and Debug`
     - .vscode/launch.json, tasks.json が作られる(置き換えますか？の警告は OK)
+- これで、VSCode のデバッグタブからデバッグ対象を切り替えられるようになる
+
+## テスト
+
+- `dotnet new mstest -o {Path}`
+  - MSTest プロジェクト作成
+- `dotnet sln add {Path}`
+  - ソリューションにプロジェクト作成
+- `dotnet add {参照する側} reference {参照される側}`
+  - プロジェクト参照を追加する
+- `dotnet test`
+  - テストを書いたらテストプロジェクトフォルダでテスト実行できる
+  - もしくは VSCode のテストタブから実行できる
 
 ## 参考
 
 - [[C#]VSCode で複数プロジェクトを持つソリューションを作るときの備忘録](https://qiita.com/unyorita/items/8a92cb19b618e8e4a4a5)
+- [VSCode と dotnet-cli で C#のソースコードをテスト出来るようにするまで](https://qiita.com/jnuank/items/e9aeb2d8c99d1e6f1081)
