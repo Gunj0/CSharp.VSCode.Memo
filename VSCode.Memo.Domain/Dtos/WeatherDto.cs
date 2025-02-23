@@ -1,6 +1,6 @@
-namespace VSCode.Memo.UI
+namespace VSCode.Memo.Domain.Dtos
 {
-    public class Dto
+    public class WeatherDto
     {
         public int AreaId { get; set; }
 

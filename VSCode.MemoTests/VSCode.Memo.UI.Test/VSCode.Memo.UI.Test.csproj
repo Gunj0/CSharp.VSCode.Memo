@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\VSCode.Memo.UI\VSCode.Memo.UI.csproj" />
+    <ProjectReference Include="..\..\VSCode.Memo.Domain\VSCode.Memo.Domain.csproj" />
   </ItemGroup>
 
 </Project>

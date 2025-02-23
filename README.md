@@ -99,6 +99,11 @@
 - NuGet Gallery の場合
   - `Control + J`の NUGET タブで GUI 操作する
 
+## テスト駆動開発
+
+- 先に存在しないプロパティやメソッドに対するテストを書く
+- 存在しないプロパティやメソッドの上で`Control + .`を押すと自動生成される
+
 ## 参考
 
 - [[C#]VSCode で複数プロジェクトを持つソリューションを作るときの備忘録](https://qiita.com/unyorita/items/8a92cb19b618e8e4a4a5)
