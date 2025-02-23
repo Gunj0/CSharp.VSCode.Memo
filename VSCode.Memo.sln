@@ -5,9 +5,9 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VSCode.MemoTests", "VSCode.MemoTests", "{4191EA61-38BB-4F48-A7E2-434E6C5EFB92}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VSCode.Memo.Console.Test", "VSCode.MemoTests\VSCode.Memo.Console.Test\VSCode.Memo.Console.Test.csproj", "{64131B2E-4035-4ED6-9C4C-8967D55FDE5A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VSCode.Memo.WeatherLatestView.Test", "VSCode.MemoTests\VSCode.Memo.WeatherLatestView.Test\VSCode.Memo.WeatherLatestView.Test.csproj", "{64131B2E-4035-4ED6-9C4C-8967D55FDE5A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VSCode.Memo.Console", "VSCode.Memo.Console\VSCode.Memo.Console.csproj", "{E7C9C00A-6FFC-41F1-8E0F-C55C16803C80}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VSCode.Memo.WeatherLatestView", "VSCode.Memo.WeatherLatestView\VSCode.Memo.WeatherLatestView.csproj", "{E7C9C00A-6FFC-41F1-8E0F-C55C16803C80}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VSCode.Memo.Classlib", "VSCode.Memo.Classlib\VSCode.Memo.Classlib.csproj", "{421B64AC-FD97-4C48-98E0-87A3E2AE8395}"
 EndProject

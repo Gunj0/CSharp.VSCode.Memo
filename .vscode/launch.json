@@ -5,14 +5,14 @@
       // IntelliSense を使用して、C# デバッグに存在する属性を確認します
       // 既存の属性の説明にホバーを使用する
       // 詳細については、https://github.com/dotnet/vscode-csharp/blob/main/debugger-launchjson.md を参照してください
-      "name": "VSCode.Memo.Console",
+      "name": "VSCode.Memo.WeatherLatestView",
       "type": "coreclr",
       "request": "launch",
-      "preLaunchTask": "build_Console",
+      "preLaunchTask": "build_WeatherLatestView",
       // ターゲット フレームワークを変更した場合は、プログラム パスを更新するようにしてください。
-      "program": "${workspaceFolder}/VSCode.Memo.Console/bin/Debug/net9.0/VSCode.Memo.Console.dll",
+      "program": "${workspaceFolder}/VSCode.Memo.WeatherLatestView/bin/Debug/net9.0/VSCode.Memo.WeatherLatestView.dll",
       "args": [],
-      "cwd": "${workspaceFolder}/VSCode.Memo.Console",
+      "cwd": "${workspaceFolder}/VSCode.Memo.WeatherLatestView",
       // 'console' フィールドの詳細については、https://aka.ms/VSCode-CS-LaunchJson-Console を参照してください
       "console": "internalConsole",
       "stopAtEntry": false

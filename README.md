@@ -2,7 +2,7 @@
 
 - C#開発を VSCode で行う上でのメモ
 
-## 拡張機能
+## VSCode 拡張機能
 
 - 必須
   - C# Dev Kit (Microsoft)
@@ -27,11 +27,11 @@
 - `dotnet new list`
   - インストールされているテンプレート確認
 - `dotnet new gitignore`
-  - .gitignore 作成
-- `dotnet new console -o {Path}`
-  - 指定の場所にコンソールプロジェクト作成
+  - .gitignore テンプレート作成
 - `dotnet new classlib -o {Path}`
   - 指定の場所にクラスライブラリプロジェクト作成
+- `dotnet new console -o {Path}`
+  - 指定の場所にコンソールプロジェクト作成
 - `dotnet new mvc -o {Path}`
   - 指定の場所に ASP.NET Core Web MVC プロジェクト作成
 - `dotnet new webapi -o {Path}`
@@ -42,9 +42,9 @@
 - `dotnet new sln`
   - ソリューションファイル作成
 - `dotnet sln add {Path}`
-  - プロジェクト追加
+  - ソリューションにプロジェクト追加
 - `dotnet sln remove {Path}`
-  - プロジェクト削除
+  - ソリューションにプロジェクト削除
 - `dotnet sln list`
   - ソリューション内のプロジェクト表示
 

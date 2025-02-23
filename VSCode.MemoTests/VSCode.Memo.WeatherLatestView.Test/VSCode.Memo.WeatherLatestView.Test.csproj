@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\VSCode.Memo.Console\VSCode.Memo.Console.csproj" />
+    <ProjectReference Include="..\..\VSCode.Memo.WeatherLatestView\VSCode.Memo.WeatherLatestView.csproj" />
   </ItemGroup>
 
 </Project>
