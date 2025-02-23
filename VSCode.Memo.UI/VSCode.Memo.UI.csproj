@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\VSCode.Memo.Infrastructure\VSCode.Memo.Infrastructure.csproj" />
+    <ProjectReference Include="..\VSCode.Memo.Domain\VSCode.Memo.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>
