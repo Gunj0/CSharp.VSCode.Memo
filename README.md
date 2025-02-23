@@ -16,6 +16,8 @@
 - 任意
   - C# Extensions (JosKreativ)
     - 右クリックでクラスファイル等を追加できる
+  - NuGet Gallery (pcislo)
+    - 統合ターミナルで NuGet が GUI 操作できる
 
 ## .NET バージョン確認
 
@@ -89,6 +91,13 @@
 - `dotnet test`
   - テストを書いたらテストプロジェクトフォルダでテスト実行できる
   - もしくは VSCode のテストタブから実行できる
+
+## NuGet 追加
+
+- C# Dev Kit の場合
+  - `Control + Shift + P`→`NuGet: NuGet パッケージを追加`
+- NuGet Gallery の場合
+  - `Control + J`の NUGET タブで GUI 操作する
 
 ## 参考
 

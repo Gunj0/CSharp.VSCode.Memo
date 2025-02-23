@@ -5,13 +5,17 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VSCode.MemoTests", "VSCode.MemoTests", "{4191EA61-38BB-4F48-A7E2-434E6C5EFB92}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VSCode.Memo.WeatherLatestView.Test", "VSCode.MemoTests\VSCode.Memo.WeatherLatestView.Test\VSCode.Memo.WeatherLatestView.Test.csproj", "{64131B2E-4035-4ED6-9C4C-8967D55FDE5A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VSCode.Memo.UI.Test", "VSCode.MemoTests\VSCode.Memo.UI.Test\VSCode.Memo.UI.Test.csproj", "{64131B2E-4035-4ED6-9C4C-8967D55FDE5A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VSCode.Memo.WeatherLatestView", "VSCode.Memo.WeatherLatestView\VSCode.Memo.WeatherLatestView.csproj", "{E7C9C00A-6FFC-41F1-8E0F-C55C16803C80}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VSCode.Memo.UI", "VSCode.Memo.UI\VSCode.Memo.UI.csproj", "{E7C9C00A-6FFC-41F1-8E0F-C55C16803C80}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VSCode.Memo.Classlib", "VSCode.Memo.Classlib\VSCode.Memo.Classlib.csproj", "{421B64AC-FD97-4C48-98E0-87A3E2AE8395}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VSCode.Memo.Infrastructure", "VSCode.Memo.Infrastructure\VSCode.Memo.Infrastructure.csproj", "{421B64AC-FD97-4C48-98E0-87A3E2AE8395}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VSCode.Memo.Classlib.Test", "VSCode.MemoTests\VSCode.Memo.Classlib.Test\VSCode.Memo.Classlib.Test.csproj", "{425DF74B-897A-4850-AFCC-F4B6D9984F81}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VSCode.Memo.Infrastructure.Test", "VSCode.MemoTests\VSCode.Memo.Infrastructure.Test\VSCode.Memo.Infrastructure.Test.csproj", "{425DF74B-897A-4850-AFCC-F4B6D9984F81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VSCode.Memo.Domain", "VSCode.Memo.Domain\VSCode.Memo.Domain.csproj", "{6A42571D-E307-4B5E-B5BE-B2598F46CB58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VSCode.Memo.Domain.Test", "VSCode.MemoTests\VSCode.Memo.Domain.Test\VSCode.Memo.Domain.Test.csproj", "{86D4563A-680A-4844-B13D-F0C66D456E11}"
 EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
@@ -74,9 +78,34 @@ Global
 		{425DF74B-897A-4850-AFCC-F4B6D9984F81}.Release|x64.Build.0 = Release|Any CPU
 		{425DF74B-897A-4850-AFCC-F4B6D9984F81}.Release|x86.ActiveCfg = Release|Any CPU
 		{425DF74B-897A-4850-AFCC-F4B6D9984F81}.Release|x86.Build.0 = Release|Any CPU
+		{6A42571D-E307-4B5E-B5BE-B2598F46CB58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A42571D-E307-4B5E-B5BE-B2598F46CB58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A42571D-E307-4B5E-B5BE-B2598F46CB58}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{6A42571D-E307-4B5E-B5BE-B2598F46CB58}.Debug|x64.Build.0 = Debug|Any CPU
+		{6A42571D-E307-4B5E-B5BE-B2598F46CB58}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6A42571D-E307-4B5E-B5BE-B2598F46CB58}.Debug|x86.Build.0 = Debug|Any CPU
+		{6A42571D-E307-4B5E-B5BE-B2598F46CB58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A42571D-E307-4B5E-B5BE-B2598F46CB58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A42571D-E307-4B5E-B5BE-B2598F46CB58}.Release|x64.ActiveCfg = Release|Any CPU
+		{6A42571D-E307-4B5E-B5BE-B2598F46CB58}.Release|x64.Build.0 = Release|Any CPU
+		{6A42571D-E307-4B5E-B5BE-B2598F46CB58}.Release|x86.ActiveCfg = Release|Any CPU
+		{6A42571D-E307-4B5E-B5BE-B2598F46CB58}.Release|x86.Build.0 = Release|Any CPU
+		{86D4563A-680A-4844-B13D-F0C66D456E11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86D4563A-680A-4844-B13D-F0C66D456E11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86D4563A-680A-4844-B13D-F0C66D456E11}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{86D4563A-680A-4844-B13D-F0C66D456E11}.Debug|x64.Build.0 = Debug|Any CPU
+		{86D4563A-680A-4844-B13D-F0C66D456E11}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{86D4563A-680A-4844-B13D-F0C66D456E11}.Debug|x86.Build.0 = Debug|Any CPU
+		{86D4563A-680A-4844-B13D-F0C66D456E11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86D4563A-680A-4844-B13D-F0C66D456E11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86D4563A-680A-4844-B13D-F0C66D456E11}.Release|x64.ActiveCfg = Release|Any CPU
+		{86D4563A-680A-4844-B13D-F0C66D456E11}.Release|x64.Build.0 = Release|Any CPU
+		{86D4563A-680A-4844-B13D-F0C66D456E11}.Release|x86.ActiveCfg = Release|Any CPU
+		{86D4563A-680A-4844-B13D-F0C66D456E11}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{64131B2E-4035-4ED6-9C4C-8967D55FDE5A} = {4191EA61-38BB-4F48-A7E2-434E6C5EFB92}
 		{425DF74B-897A-4850-AFCC-F4B6D9984F81} = {4191EA61-38BB-4F48-A7E2-434E6C5EFB92}
+		{86D4563A-680A-4844-B13D-F0C66D456E11} = {4191EA61-38BB-4F48-A7E2-434E6C5EFB92}
 	EndGlobalSection
 EndGlobal

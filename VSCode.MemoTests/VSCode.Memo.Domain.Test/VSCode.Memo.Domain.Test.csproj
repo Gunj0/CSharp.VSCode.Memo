@@ -16,8 +16,4 @@
     <Using Include="Microsoft.VisualStudio.TestTools.UnitTesting" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\VSCode.Memo.Classlib\VSCode.Memo.Classlib.csproj" />
-  </ItemGroup>
-
 </Project>
