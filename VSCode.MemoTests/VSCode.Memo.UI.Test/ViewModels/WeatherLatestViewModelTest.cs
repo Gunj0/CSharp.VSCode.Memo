@@ -1,4 +1,4 @@
-using VSCode.Memo.Domain.Dtos;
+using VSCode.Memo.Domain.Entities;
 using VSCode.Memo.Domain.Repositories;
 using VSCode.Memo.UI.ViewModels;
 
@@ -33,11 +33,11 @@ namespace VSCode.Memo.UI.Test
 
     class WeatherMock : IWeatherRepository
     {
-        public WeatherDto GetLatest(int areaId)
+        public WeatherEntity GetLatest(int areaId)
         {
             if (areaId == 1)
             {
-                return new WeatherDto
+                return new WeatherEntity
                 {
                     AreaId = 1,
                     DataDate = new DateTime(2021, 1, 1),
@@ -47,7 +47,7 @@ namespace VSCode.Memo.UI.Test
             }
             else if (areaId == 2)
             {
-                return new WeatherDto
+                return new WeatherEntity
                 {
                     AreaId = 2,
                     DataDate = new DateTime(2021, 1, 2),
@@ -57,7 +57,7 @@ namespace VSCode.Memo.UI.Test
             }
             else
             {
-                return new WeatherDto
+                return new WeatherEntity
                 {
                     AreaId = 3,
                     DataDate = new DateTime(2021, 1, 3),

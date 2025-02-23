@@ -1,9 +1,9 @@
-using VSCode.Memo.Domain.Dtos;
+using VSCode.Memo.Domain.Entities;
 
 namespace VSCode.Memo.Domain.Repositories
 {
     public interface IWeatherRepository
     {
-        WeatherDto GetLatest(int areaId);
+        WeatherEntity GetLatest(int areaId);
     }
 }

@@ -1,6 +1,6 @@
-namespace VSCode.Memo.Domain.Dtos
+namespace VSCode.Memo.Domain.Entities
 {
-    public class WeatherDto
+    public class WeatherEntity
     {
         public int AreaId { get; set; }
 

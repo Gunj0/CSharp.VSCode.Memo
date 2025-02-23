@@ -1,9 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.Data.Sqlite;
-using VSCode.Memo.Domain.Dtos;
+using VSCode.Memo.Domain.Entities;
 using VSCode.Memo.Domain.Repositories;
 
 namespace VSCode.Memo.Infrastructure
@@ -12,7 +8,7 @@ namespace VSCode.Memo.Infrastructure
     {
         private readonly string _connectionString = @"Data Source=/Users/gunj0/vscode/cs/VSCode.Memo/DB/VSCode.Memo.db";
 
-        public WeatherDto GetLatest(int areaId)
+        public WeatherEntity GetLatest(int areaId)
         {
             var sql = @"
                 SELECT
@@ -28,7 +24,7 @@ namespace VSCode.Memo.Infrastructure
                 LIMIT 1
             ";
 
-            var dto = new WeatherDto();
+            var entity = new WeatherEntity();
             using (var connection = new SqliteConnection(_connectionString))
             using (var command = new SqliteCommand(sql, connection))
             {
@@ -38,14 +34,14 @@ namespace VSCode.Memo.Infrastructure
                 using (var reader = command.ExecuteReader())
                 {
                     reader.Read();
-                    dto.AreaId = reader.GetInt32(0);
-                    dto.DataDate = reader.GetDateTime(1);
-                    dto.Condition = reader.GetInt32(2);
-                    dto.Temperature = reader.GetFloat(3);
+                    entity.AreaId = reader.GetInt32(0);
+                    entity.DataDate = reader.GetDateTime(1);
+                    entity.Condition = reader.GetInt32(2);
+                    entity.Temperature = reader.GetFloat(3);
                 }
             }
 
-            return dto;
+            return entity;
         }
     }
 }

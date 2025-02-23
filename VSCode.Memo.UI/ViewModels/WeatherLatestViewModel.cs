@@ -6,7 +6,7 @@ namespace VSCode.Memo.UI.ViewModels
 {
     public class WeatherLatestViewModel
     {
-        private IWeatherRepository _weatherRepository;
+        private readonly IWeatherRepository _weatherRepository;
 
         public WeatherLatestViewModel(IWeatherRepository weatherRepository)
         {
@@ -20,14 +20,14 @@ namespace VSCode.Memo.UI.ViewModels
 
         public void Search()
         {
-            var dto = _weatherRepository.GetLatest(Convert.ToInt32(AreaIdText));
-            if (dto != null)
+            var entity = _weatherRepository.GetLatest(Convert.ToInt32(AreaIdText));
+            if (entity != null)
             {
-                AreaIdText = dto.AreaId.ToString();
-                DataDateText = dto.DataDate.ToString("yyyy/MM/dd");
-                ConditionText = dto.Condition.ToString();
+                AreaIdText = entity.AreaId.ToString();
+                DataDateText = entity.DataDate.ToString("yyyy/MM/dd");
+                ConditionText = entity.Condition.ToString();
                 TemperatureText = CommonFunc.RoundString(
-                    dto.Temperature, CommonConst.TemperatureDecimalPoint)
+                    entity.Temperature, CommonConst.TemperatureDecimalPoint)
                     + CommonConst.TemperatureUnitName;
             }
         }
