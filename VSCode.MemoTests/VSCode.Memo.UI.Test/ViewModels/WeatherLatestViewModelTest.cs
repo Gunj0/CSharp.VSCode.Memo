@@ -5,10 +5,8 @@ using VSCode.Memo.UI.ViewModels;
 namespace VSCode.Memo.UI.Test
 {
     [TestClass]
-    public class ViewModelTest
+    public class WeatherLatestViewModelTest
     {
-
-
         [TestMethod]
         public void シナリオ()
         {
@@ -37,33 +35,15 @@ namespace VSCode.Memo.UI.Test
         {
             if (areaId == 1)
             {
-                return new WeatherEntity
-                {
-                    AreaId = 1,
-                    DataDate = new DateTime(2021, 1, 1),
-                    Condition = 1,
-                    Temperature = 1.0f
-                };
+                return new WeatherEntity(1, new DateTime(2021, 1, 1), 1, 1.0f);
             }
             else if (areaId == 2)
             {
-                return new WeatherEntity
-                {
-                    AreaId = 2,
-                    DataDate = new DateTime(2021, 1, 2),
-                    Condition = 2,
-                    Temperature = 2.0f
-                };
+                return new WeatherEntity(2, new DateTime(2021, 1, 2), 2, 2.0f);
             }
             else
             {
-                return new WeatherEntity
-                {
-                    AreaId = 3,
-                    DataDate = new DateTime(2021, 1, 3),
-                    Condition = 3,
-                    Temperature = 3.0f
-                };
+                return new WeatherEntity(3, new DateTime(2021, 1, 3), 3, 3.0f);
             }
         }
     }

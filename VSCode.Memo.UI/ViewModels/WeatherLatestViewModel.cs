@@ -1,6 +1,6 @@
+using VSCode.Memo.Domain.Common;
 using VSCode.Memo.Domain.Repositories;
-using VSCode.Memo.UI.Common;
-using VSCode.Memo.UI.Data;
+using VSCode.Memo.Domain.ValueObjects;
 
 namespace VSCode.Memo.UI.ViewModels
 {
@@ -23,12 +23,9 @@ namespace VSCode.Memo.UI.ViewModels
             var entity = _weatherRepository.GetLatest(Convert.ToInt32(AreaIdText));
             if (entity != null)
             {
-                AreaIdText = entity.AreaId.ToString();
                 DataDateText = entity.DataDate.ToString("yyyy/MM/dd");
                 ConditionText = entity.Condition.ToString();
-                TemperatureText = CommonFunc.RoundString(
-                    entity.Temperature, CommonConst.TemperatureDecimalPoint)
-                    + CommonConst.TemperatureUnitName;
+                TemperatureText = entity.Temperature.DisplayValueWithUnit;
             }
         }
     }

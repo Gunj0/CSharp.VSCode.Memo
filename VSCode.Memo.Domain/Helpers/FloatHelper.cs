@@ -1,11 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace VSCode.Memo.UI.Common
+namespace VSCode.Memo.Domain.Helpers
 {
-    public static class CommonFunc
+    public static class FloatHelper
     {
         public static string RoundString(float value, int decimalPoint)
         {
