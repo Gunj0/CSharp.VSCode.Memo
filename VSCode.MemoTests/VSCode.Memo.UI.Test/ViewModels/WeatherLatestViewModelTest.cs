@@ -23,19 +23,19 @@ namespace VSCode.Memo.UI.Test
             viewModel.Search();
             Assert.AreEqual("1", viewModel.AreaIdText);
             Assert.AreEqual("2021/01/01", viewModel.DataDateText);
-            Assert.AreEqual("1", viewModel.ConditionText);
-            Assert.AreEqual("1.00℃", viewModel.TemperatureText);
+            Assert.AreEqual("曇り", viewModel.ConditionText);
+            Assert.AreEqual("1.0℃", viewModel.TemperatureText);
 
         }
     }
 
     class WeatherMock : IWeatherRepository
     {
-        public WeatherEntity GetLatest(int areaId)
+        public WeatherEntity? GetLatest(int areaId)
         {
             if (areaId == 1)
             {
-                return new WeatherEntity(1, new DateTime(2021, 1, 1), 1, 1.0f);
+                return new WeatherEntity(1, new DateTime(2021, 1, 1), 2, 1.0f);
             }
             else if (areaId == 2)
             {

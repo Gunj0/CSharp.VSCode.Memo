@@ -24,7 +24,10 @@ namespace VSCode.Memo.Domain.ValueObjects
         {
             get
             {
-                return FloatHelper.RoundString(Value, DecimalPoint);
+                // 拡張メソッドを使った形
+                return Value.RoundString(DecimalPoint);
+                // 以下と同じ意味
+                // return FloatHelper.RoundString(Value, DecimalPoint);
             }
         }
 
@@ -33,7 +36,10 @@ namespace VSCode.Memo.Domain.ValueObjects
         {
             get
             {
-                return FloatHelper.RoundString(Value, DecimalPoint) + UnitName;
+                // 拡張メソッドを使った形
+                return Value.RoundString(DecimalPoint) + UnitName;
+                // 以下と同じ意味
+                // return FloatHelper.RoundString(Value, DecimalPoint) + UnitName;
             }
         }
 

@@ -12,8 +12,9 @@ namespace VSCode.Memo.Domain.Entities
         {
             AreaId = areaId;
             DataDate = dataDate;
-            Condition = condition;
-            // ここでバリューオブジェクトを生成
+            // バリューオブジェクトを生成
+            Condition = new Condition(condition);
+            // バリューオブジェクトを生成
             Temperature = new Temperature(temperature);
         }
 
@@ -21,9 +22,22 @@ namespace VSCode.Memo.Domain.Entities
 
         public DateTime DataDate { get; }
 
-        public int Condition { get; }
+        public Condition Condition { get; }
 
         public Temperature Temperature { get; }
+
+        public bool SoHot()
+        {
+            // ValueObjectの等価性で判断できる
+            if (Condition == Condition.Sunny)
+            {
+                if (Temperature.Value > 30)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
 
         // データに全体に対するロジックは、エンティティに持たせる
         public bool IsOK()

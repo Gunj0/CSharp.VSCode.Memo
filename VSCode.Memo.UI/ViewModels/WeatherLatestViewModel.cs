@@ -1,6 +1,5 @@
-using VSCode.Memo.Domain.Common;
 using VSCode.Memo.Domain.Repositories;
-using VSCode.Memo.Domain.ValueObjects;
+using VSCode.Memo.Infrastructure.Sqlite;
 
 namespace VSCode.Memo.UI.ViewModels
 {
@@ -8,6 +7,12 @@ namespace VSCode.Memo.UI.ViewModels
     {
         private readonly IWeatherRepository _weatherRepository;
 
+        // 引数がなければSqliteを使う
+        public WeatherLatestViewModel() : this(new WeatherSqlite())
+        {
+        }
+
+        // 引数があればそれを使う
         public WeatherLatestViewModel(IWeatherRepository weatherRepository)
         {
             _weatherRepository = weatherRepository;
@@ -24,7 +29,7 @@ namespace VSCode.Memo.UI.ViewModels
             if (entity != null)
             {
                 DataDateText = entity.DataDate.ToString("yyyy/MM/dd");
-                ConditionText = entity.Condition.ToString();
+                ConditionText = entity.Condition.DisplayValue;
                 TemperatureText = entity.Temperature.DisplayValueWithUnit;
             }
         }

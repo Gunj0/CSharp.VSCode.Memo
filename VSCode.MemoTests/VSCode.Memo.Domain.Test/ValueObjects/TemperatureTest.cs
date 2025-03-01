@@ -15,7 +15,7 @@ namespace VSCode.Memo.Domain.Test.ValueObject
         {
             var t = new Temperature(12.345f);
             Assert.AreEqual(12.345f, t.Value);
-            Assert.AreEqual("12.3℃", t.DisplayValue);
+            Assert.AreEqual("12.3℃", t.DisplayValueWithUnit);
         }
 
         [TestMethod]
