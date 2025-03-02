@@ -1,6 +1,7 @@
 # CSharp on VSCode Memo
 
 - C#開発を VSCode で行う上でのメモ
+- +ドメイン駆動設計
 
 ## VSCode 拡張機能
 
@@ -21,28 +22,35 @@
 
 ## .NET バージョン確認
 
+- [.NET の最新バージョン](https://dotnet.microsoft.com/ja-jp/download)
 - `dotnet --version`
-  - インストールされているバージョン確認
+  - 使用されている.NET SDK バージョン
+- `dotnet --list-sdks`
+  - インストールされている.NET SDK バージョン一覧
+- `dotnet --list-runtimes`
+  - インストールされている.NET ランタイム一覧
+- `dotnet --info`
+  - 環境情報などの詳しい情報
 
-## テンプレート作成
+## プロジェクトテンプレート作成
 
+- [テンプレート一覧](https://learn.microsoft.com/ja-jp/dotnet/core/tools/dotnet-new)
 - `dotnet new list`
   - インストールされているテンプレート確認
-- `dotnet new gitignore`
-  - .gitignore テンプレート作成
-- `dotnet new classlib -o {Path}`
-  - 指定の場所にクラスライブラリプロジェクト作成
-- `dotnet new console -o {Path}`
-  - 指定の場所にコンソールプロジェクト作成
-- `dotnet new mvc -o {Path}`
-  - 指定の場所に ASP.NET Core Web MVC プロジェクト作成
-- `dotnet new webapi -o {Path}`
-  - 指定の場所に ASP.NET Core Web API プロジェクト作成
+- `dotnet new {テンプレート名} -o {Path}`
+  - テンプレート作成
+- 主要テンプレート名
+  - sln: ソリューション
+  - gitignore: .gitignore
+  - console: コンソールアプリ
+  - classlib: クラスライブラリ
+  - mvc: ASP.NET Core Web MVC
+  - webapi: ASP.NET Core Web API
+  - mstest: MSTest
+  - webconfig: Web 構成
 
-## ソリューション追加
+## ソリューションへ追加
 
-- `dotnet new sln`
-  - ソリューションファイル作成
 - `dotnet sln add {Path}`
   - ソリューションにプロジェクト追加
 - `dotnet sln remove {Path}`
@@ -106,5 +114,7 @@
 
 ## 参考
 
+- [dotnet コマンド](https://learn.microsoft.com/ja-jp/dotnet/core/tools/dotnet)
 - [[C#]VSCode で複数プロジェクトを持つソリューションを作るときの備忘録](https://qiita.com/unyorita/items/8a92cb19b618e8e4a4a5)
 - [VSCode と dotnet-cli で C#のソースコードをテスト出来るようにするまで](https://qiita.com/jnuank/items/e9aeb2d8c99d1e6f1081)
+- [C#でドメイン駆動開発パート１【C#でドメイン駆動開発とテスト駆動開発を使って保守性の高いプログラミングをする方法】](https://yayoi-kkjp.udemy.com/course/domain-1/)

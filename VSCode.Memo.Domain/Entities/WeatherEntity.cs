@@ -3,7 +3,7 @@ using VSCode.Memo.Domain.ValueObjects;
 namespace VSCode.Memo.Domain.Entities
 {
     // エンティティ
-    // …データベースのテーブルに対応する
+    // …テーブルの1レコードに対応する
     public sealed class WeatherEntity
     {
         // 完全コンストラクタパターン
