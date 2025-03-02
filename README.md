@@ -90,17 +90,11 @@
 
 ## テスト
 
-- `dotnet new mstest -o {Path}`
-  - MSTest プロジェクト作成
-- `dotnet sln add {Path}`
-  - ソリューションにプロジェクト作成
-- `dotnet add {参照する側} reference {参照される側}`
-  - プロジェクト参照を追加する
 - `dotnet test`
-  - テストを書いたらテストプロジェクトフォルダでテスト実行できる
+  - テスト実行される
   - もしくは VSCode のテストタブから実行できる
 
-## NuGet 追加
+## NuGet
 
 - C# Dev Kit の場合
   - `Control + Shift + P`→`NuGet: NuGet パッケージを追加`
