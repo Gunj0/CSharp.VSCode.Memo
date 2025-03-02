@@ -11,17 +11,11 @@ namespace VSCode.Memo.Domain.ValueObjects
             {
                 return false;
             }
-            var vo = obj as T;
-            if (vo == null)
+            if (obj is not T vo)
             {
                 return false;
             }
             return EqualsCore(vo);
-            // こちらでも可
-            // objがTemperature方ならtemperatureに代入し、Valueが等しいか判定
-            // return obj is Temperature temperature &&
-            //        Value == temperature.Value;
-
         }
 
         // 別インスタンスでも値が同じであれば同じとみなす②
@@ -30,7 +24,7 @@ namespace VSCode.Memo.Domain.ValueObjects
             return vo1.Equals(vo2);
         }
 
-        // ==は同時に!=も実装する
+        // ==は同時に!=も実装する必要がある
         public static bool operator !=(ValueObject<T> vo1, ValueObject<T> vo2)
         {
             return !vo1.Equals(vo2);
